@@ -10,7 +10,9 @@ void main() {
 }
 
 class GodotLauncherApp extends StatelessWidget {
-  const GodotLauncherApp({super.key});
+  const GodotLauncherApp({super.key, this.releaseService});
+
+  final GodotReleaseService? releaseService;
 
   @override
   Widget build(BuildContext context) {
@@ -30,20 +32,22 @@ class GodotLauncherApp extends StatelessWidget {
           displayColor: const Color(0xff17201c),
         ),
       ),
-      home: const GodotLauncherScreen(),
+      home: GodotLauncherScreen(releaseService: releaseService),
     );
   }
 }
 
 class GodotLauncherScreen extends StatefulWidget {
-  const GodotLauncherScreen({super.key});
+  const GodotLauncherScreen({super.key, this.releaseService});
+
+  final GodotReleaseService? releaseService;
 
   @override
   State<GodotLauncherScreen> createState() => _GodotLauncherScreenState();
 }
 
 class _GodotLauncherScreenState extends State<GodotLauncherScreen> {
-  final GodotReleaseService _releaseService = GodotReleaseService();
+  late final GodotReleaseService _releaseService;
   final TextEditingController _executableController = TextEditingController();
   final TextEditingController _argumentsController = TextEditingController();
   final TextEditingController _installPathController = TextEditingController();
@@ -61,6 +65,7 @@ class _GodotLauncherScreenState extends State<GodotLauncherScreen> {
   @override
   void initState() {
     super.initState();
+    _releaseService = widget.releaseService ?? GodotReleaseService();
     _installPathController.text = _defaultInstallPath;
     unawaited(_bootstrap());
   }

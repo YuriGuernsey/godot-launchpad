@@ -18,6 +18,16 @@ to making games.
 - Launches managed Godot installs directly.
 - Supports desktop builds for macOS, Windows, and Linux.
 
+## Screenshots
+
+![Godot Launchpad main screen](assets/screenshots/godot-launchpad-main.png)
+
+Version selection and a ready-to-launch managed Godot install.
+
+![Godot Launchpad installing a selected version](assets/screenshots/godot-launchpad-installing.png)
+
+Background install flow with progress, status, and remembered paths.
+
 ## Who It Is For
 
 - Godot developers who switch between engine versions.
@@ -29,6 +39,17 @@ to making games.
 
 Godot Launchpad is early open source software. The macOS desktop build is the
 most tested path right now, with Windows and Linux project scaffolds included.
+
+## Why Flutter
+
+Godot Launchpad uses Flutter because it keeps the desktop UI, state, and release
+workflow in one approachable codebase for macOS, Windows, and Linux. The app can
+still use `dart:io` for the practical desktop work: downloading archives,
+extracting builds, remembering local paths, and launching the Godot executable.
+
+For a small open-source launcher, that is a good trade: fast iteration, polished
+controls, real desktop packaging hooks, and fewer separate native shells for
+contributors to understand.
 
 ## Run From Source
 
