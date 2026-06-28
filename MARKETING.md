@@ -26,6 +26,10 @@ very welcome.
 
 Repo: https://github.com/YuriGuernsey/godot-launchpad
 
+Logo: assets/branding/godot-launchpad-logo.png
+
+Release: https://github.com/YuriGuernsey/godot-launchpad/releases/tag/v0.1.0
+
 ## Community Post
 
 I built a small open-source desktop app for managing Godot versions:

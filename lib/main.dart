@@ -611,13 +611,14 @@ class _Header extends StatelessWidget {
           width: 56,
           height: 56,
           decoration: BoxDecoration(
-            color: const Color(0xff1f8a70),
-            borderRadius: BorderRadius.circular(8),
-          ),
-          child: const Icon(
-            Icons.gamepad_outlined,
             color: Colors.white,
-            size: 30,
+            borderRadius: BorderRadius.circular(8),
+            border: Border.all(color: const Color(0xffdce3dd)),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Image.asset(
+            'assets/branding/godot-launchpad-logo.png',
+            fit: BoxFit.cover,
           ),
         ),
         const SizedBox(width: 18),

@@ -1,5 +1,7 @@
 # Godot Launchpad
 
+![Godot Launchpad logo](assets/branding/godot-launchpad-logo.png)
+
 Godot Launchpad is an open-source desktop version manager for Godot. It checks
 the latest stable Godot releases, installs the selected version in the
 background, keeps a managed install folder, and launches Godot without sending
